@@ -99,7 +99,7 @@ Counter in string context: Count: Counter(5)
 === END PROTOTYPE DEMO ===
 ```
 
-## Trainer Checklist
+## Checklist
 
 **Static Methods Demo:**
 - [ ] Object.assign - copies properties from source objects to target
@@ -135,13 +135,6 @@ Counter in string context: Count: Counter(5)
 - [ ] valueOf - override to produce primitive and show behavior
 - [ ] Legacy __proto__ - briefly shown with modern alternatives
 
-## Notes & Caveats
-
-- **Object.hasOwn**: Available in ES2022+. For older Node versions, use `Object.prototype.hasOwnProperty.call(obj, prop)` as fallback.
-- **Freeze/Seal/PreventExtensions**: These operations are shallow - nested objects remain mutable.
-- **__proto__**: Legacy property access. Prefer `Object.getPrototypeOf()` and `Object.setPrototypeOf()` for modern code.
-- **Symbol Properties**: Symbol-keyed properties are not included in `Object.keys()` but appear in `Object.getOwnPropertySymbols()`.
-- **Strict Mode**: Some operations (like modifying frozen objects) will throw errors in strict mode.
 
 ## ExpectedOutputs.txt
 
@@ -176,17 +169,3 @@ Counter in comparison: true
 Legacy __proto__ access: true
 Modern getPrototypeOf: true
 ```
-
-## Pandoc Commands for Document Generation
-
-To generate alternative document formats:
-
-```bash
-# Generate DOCX
-pandoc README.md -o README.docx
-
-# Generate PDF
-pandoc README.md -o README.pdf
-```
-
-**Note**: Ensure Pandoc is installed on your system for document conversion.
